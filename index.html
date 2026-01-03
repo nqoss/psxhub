@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>PSX Hub – PlayStation Legacy Preservation</title>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+  <style>
+    body { margin:0; font-family:'Roboto',sans-serif; background:#f4f4f4; color:#333; line-height:1.6; }
+    header { background:#0044aa; color:white; padding:2rem; text-align:center; }
+    h1 { margin:0; font-size:2.5rem; }
+    nav { background:#003388; padding:1rem; text-align:center; }
+    nav a { color:white; margin:0 1rem; text-decoration:none; font-weight:500; }
+    nav a:hover { text-decoration:underline; }
+    .container { max-width:1200px; margin:2rem auto; padding:0 1rem; }
+    .cards { display:grid; grid-template-columns:repeat(auto-fit, minmax(300px,1fr)); gap:2rem; }
+    .card { background:white; border-radius:8px; padding:1.5rem; box-shadow:0 2px 10px rgba(0,0,0,0.1); text-align:center; }
+    .card h3 { color:#0044aa; }
+    .btn { display:inline-block; margin-top:1rem; padding:0.8rem 1.5rem; background:#0044aa; color:white; text-decoration:none; border-radius:4px; }
+    .btn:hover { background:#003388; }
+    .facts { margin-top:4rem; }
+    .facts h2 { text-align:center; color:#0044aa; }
+    .search-bar { margin:2rem auto; max-width:600px; text-align:center; }
+    .search-bar input[type="text"] { padding:0.8rem; width:70%; border:1px solid #ccc; border-radius:4px 0 0 4px; }
+    .search-bar button { padding:0.8rem 1.5rem; background:#0044aa; color:white; border:none; border-radius:0 4px 4px 0; cursor:pointer; }
+    .search-bar button:hover { background:#003388; }
+    footer { background:#333; color:white; text-align:center; padding:2rem; margin-top:4rem; }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>PSX Hub</h1>
+    <p>Preserving the legacy of PlayStation 1 & PlayStation 2</p>
+  </header>
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="guides.html">Guides</a>
+    <a href="tools.html">Tools</a>
+    <a href="about.html">About</a>
+    <a href="contact.html">Contact</a>
+  </nav>
+
+  <div class="search-bar">
+    <form action="https://www.google.com/search" method="get">
+      <input type="text" name="q" placeholder="Search guides, tools, mods...">
+      <button type="submit">Search</button>
+    </form>
+  </div>
+
+  <div class="container">
+    <div class="cards">
+      <div class="card">
+        <h3>FreeMcBoot & OPL (PS2)</h3>
+        <p>Softmod your PS2 and play backups.</p>
+        <a href="guides.html" class="btn">View Guides</a>
+      </div>
+      <div class="card">
+        <h3>PS1 Softmods</h3>
+        <p>Tonyhax, FreePSXBoot, and more.</p>
+        <a href="guides.html" class="btn">View Guides</a>
+      </div>
+      <div class="card">
+        <h3>Hardware Mods</h3>
+        <p>Modchips, xStation, HDMI, MemCard PRO2.</p>
+        <a href="guides.html" class="btn">View Guides</a>
+      </div>
+    </div>
+
+    <div class="facts">
+      <h2>Did You Know?</h2>
+      <div class="cards">
+        <div class="card"><h3>PS1 (1994)</h3><p>Over 102 million sold – pioneered 3D gaming.</p></div>
+        <div class="card"><h3>PS2 (2000)</h3><p>Best-selling console ever: 160+ million units.</p></div>
+        <div class="card"><h3>Community Lives On</h3><p>New homebrew and mods still released in 2026!</p></div>
+      </div>
+    </div>
+  </div>
+
+  <footer>
+    © 2026 PSX Hub – Built for the community.<br>
+    Join us: <a href="https://discord.gg/XRKWhHZRAk" style="color:#00ffff;">discord.gg/XRKWhHZRAk</a>
+  </footer>
+</body>
+</html>

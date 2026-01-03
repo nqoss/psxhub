@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>PSX Hub – Tools</title>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+  <style>
+    body { margin:0; font-family:'Roboto',sans-serif; background:#f4f4f4; color:#333; line-height:1.6; }
+    header { background:#0044aa; color:white; padding:2rem; text-align:center; }
+    h1 { margin:0; font-size:2.5rem; }
+    nav { background:#003388; padding:1rem; text-align:center; }
+    nav a { color:white; margin:0 1rem; text-decoration:none; font-weight:500; }
+    nav a:hover { text-decoration:underline; }
+    .container { max-width:1200px; margin:2rem auto; padding:0 1rem; }
+    .cards { display:grid; grid-template-columns:repeat(auto-fit, minmax(300px,1fr)); gap:2rem; }
+    .card { background:white; border-radius:8px; padding:1.5rem; box-shadow:0 2px 10px rgba(0,0,0,0.1); text-align:center; }
+    .card h3 { color:#0044aa; }
+    .download-btn { display:inline-block; margin-top:1rem; padding:0.8rem 1.5rem; background:#0044aa; color:white; text-decoration:none; border-radius:4px; }
+    .download-btn:hover { background:#003388; }
+    .search-bar { margin:1rem auto; max-width:600px; text-align:center; }
+    .search-bar form { display:flex; justify-content:center; }
+    .search-bar input[type="text"] { padding:0.8rem; width:70%; border:1px solid #ccc; border-radius:4px 0 0 4px; }
+    .search-bar button { padding:0.8rem 1.5rem; background:#0044aa; color:white; border:none; border-radius:0 4px 4px 0; cursor:pointer; }
+    .search-bar button:hover { background:#003388; }
+    footer { background:#333; color:white; text-align:center; padding:2rem; margin-top:4rem; }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>PSX Hub</h1>
+    <p>Preserving the legacy of PlayStation 1 & PlayStation 2</p>
+  </header>
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="guides.html">Guides</a>
+    <a href="tools.html">Tools</a>
+    <a href="about.html">About</a>
+    <a href="contact.html">Contact</a>
+  </nav>
+
+  <div class="search-bar">
+    <form action="https://www.google.com/search" method="get">
+      <input type="text" name="q" placeholder="Search PSX Hub...">
+      <input type="hidden" name="sitesearch" value="psxhub.com">
+      <button type="submit">Search</button>
+    </form>
+  </div>
+
+  <div class="container">
+    <h2 style="text-align:center; color:#0044aa; margin:2rem 0;">Recommended Tools & Downloads</h2>
+    <div class="cards">
+      <div class="card">
+        <h3>wLaunchELF v4.43a (PS2)</h3>
+        <p>The essential file manager for PS2 homebrew.</p>
+        <a href="https://github.com/ps2homebrew/wLaunchELF/releases" target="_blank" class="download-btn">Download</a>
+      </div>
+
+      <div class="card">
+        <h3>Open PS2 Loader (Latest)</h3>
+        <p>Premier game loader for PS1/PS2 backups.</p>
+        <a href="https://github.com/ps2homebrew/Open-PS2-Loader/releases" target="_blank" class="download-btn">Download</a>
+      </div>
+
+      <div class="card">
+        <h3>FreeMcBoot Installer</h3>
+        <p>Packaged files for PS2 softmod installation.</p>
+        <a href="https://github.com/ps2homebrew/FreeMcBoot-Installer/releases" target="_blank" class="download-btn">Download</a>
+      </div>
+
+      <div class="card">
+        <h3>MechaPwn</h3>
+        <p>Region unlock for PS2 slim models.</p>
+        <a href="https://github.com/CTurt/MechaPwn/releases" target="_blank" class="download-btn">Download</a>
+      </div>
+
+      <div class="card">
+        <h3>Tonyhax International (PS1)</h3>
+        <p>Softmod for PS1 via memory card.</p>
+        <a href="https://github.com/alex-free/tonyhax-international/releases" target="_blank" class="download-btn">Download</a>
+      </div>
+
+      <div class="card">
+        <h3>FreePSXBoot (PS1)</h3>
+        <p>No-modchip exploit for PS1.</p>
+        <a href="https://github.com/brad-lin/FreePSXBoot/releases" target="_blank" class="download-btn">Download</a>
+      </div>
+
+      <div class="card">
+        <h3>PsNee (PS1 Modchip Firmware)</h3>
+        <p>Open-source PS1 modchip code for Atmel chips.</p>
+        <a href="https://github.com/kekule-as/psnee" target="_blank" class="download-btn">GitHub Repo</a>
+      </div>
+    </div>
+  </div>
+
+  <footer>
+    © 2026 PSX Hub – Built for the community. Join us on Discord: <a href="https://discord.gg/XRKWhHZRAk" style="color:#00ffff;">discord.gg/XRKWhHZRAk</a>
+  </footer>
+</body>
+</html>

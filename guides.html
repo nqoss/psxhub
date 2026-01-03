@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>PSX Hub – Guides</title>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+  <style>
+    body { margin:0; font-family:'Roboto',sans-serif; background:#f4f4f4; color:#333; line-height:1.6; }
+    header { background:#0044aa; color:white; padding:2rem; text-align:center; }
+    h1 { margin:0; font-size:2.5rem; }
+    nav { background:#003388; padding:1rem; text-align:center; }
+    nav a { color:white; margin:0 1rem; text-decoration:none; font-weight:500; }
+    nav a:hover { text-decoration:underline; }
+    .container { max-width:1200px; margin:2rem auto; padding:0 1rem; }
+    .section { margin-bottom:4rem; }
+    .section h2 { color:#0044aa; border-bottom:2px solid #0044aa; padding-bottom:0.5rem; }
+    .guide-card { background:white; border-radius:8px; padding:2rem; box-shadow:0 2px 10px rgba(0,0,0,0.1); margin-bottom:2rem; }
+    .guide-card h3 { color:#0044aa; }
+    .guide-card ol, .guide-card ul { padding-left:1.5rem; }
+    .guide-card li { margin-bottom:0.8rem; }
+    .warning { background:#fff3cd; padding:1rem; border-radius:4px; margin:1rem 0; }
+    .download-btn { display:inline-block; margin-top:1rem; padding:0.8rem 1.5rem; background:#0044aa; color:white; text-decoration:none; border-radius:4px; }
+    .download-btn:hover { background:#003388; }
+    footer { background:#333; color:white; text-align:center; padding:2rem; margin-top:4rem; }
+    .search-bar { margin:1rem auto; max-width:600px; text-align:center; }
+    .search-bar form { display:flex; justify-content:center; }
+    .search-bar input[type="text"] { padding:0.8rem; width:70%; border:1px solid #ccc; border-radius:4px 0 0 4px; }
+    .search-bar button { padding:0.8rem 1.5rem; background:#0044aa; color:white; border:none; border-radius:0 4px 4px 0; cursor:pointer; }
+    .search-bar button:hover { background:#003388; }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>PSX Hub</h1>
+    <p>Preserving the legacy of PlayStation 1 & PlayStation 2</p>
+  </header>
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="guides.html">Guides</a>
+    <a href="tools.html">Tools</a>
+    <a href="about.html">About</a>
+    <a href="contact.html">Contact</a>
+  </nav>
+
+  <div class="search-bar">
+    <form action="https://www.google.com/search" method="get">
+      <input type="text" name="q" placeholder="Search PSX Hub...">
+      <input type="hidden" name="sitesearch" value="psxhub.com"> <!-- Replace with actual domain if hosted -->
+      <button type="submit">Search</button>
+    </form>
+  </div>
+
+  <div class="container">
+    <h2 style="text-align:center; color:#0044aa; margin:2rem 0;">Detailed Modding Guides</h2>
+
+    <div class="section">
+      <h2>PlayStation 2 Guides</h2>
+
+      <div class="guide-card">
+        <h3>FreeMcBoot (FMCB) Installation</h3>
+        <p>FreeMcBoot is the essential softmod for launching homebrew on PS2 fat models and most slims (not SCPH-900xx series).</p>
+        <ol>
+          <li>Download the latest FMCB installer from the official source.</li>
+          <li>Format a USB drive to FAT32.</li>
+          <li>Copy the installer files to the root of the USB drive.</li>
+          <li>You need an entry point: Use FreeDVDBoot (burn a compatible DVD), a compatible game exploit, or an already modded console.</li>
+          <li>Run the installer and select "Multi-Install" for best cross-console compatibility.</li>
+          <li>Once installed, insert the memory card – you'll see the FMCB boot screen.</li>
+        </ol>
+        <div class="warning">Always use official files. Multi-install works on most models except the latest slims.</div>
+        <a href="https://github.com/ps2homebrew/FreeMcBoot-Installer/releases" target="_blank" class="download-btn">Download FMCB Installer</a>
+      </div>
+
+      <div class="guide-card">
+        <h3>Open PS2 Loader (OPL) Setup</h3>
+        <p>OPL lets you load PS2 backups from USB/HDD/SMB and PS1 games via Popstarter.</p>
+        <ol>
+          <li>Download the latest OPL from GitHub.</li>
+          <li>Place OPL.ELF on your FMCB memory card or storage device.</li>
+          <li>For PS2 games: Place ISOs in a "DVD" folder (for DVD-based) or "CD" (for CD-based) on your device.</li>
+          <li>Launch OPL, go to Settings > Enable the device (USB/HDD/SMB).</li>
+          <li>For PS1 games (Popstarter): Convert games to VCD format, rename ELFs appropriately, place in a POPS folder.</li>
+          <li>Configure individual game settings in OPL for compatibility modes.</li>
+        </ol>
+        <p>Check the official OPL compatibility list for best settings.</p>
+        <a href="https://github.com/ps2homebrew/Open-PS2-Loader/releases" target="_blank" class="download-btn">Download OPL</a>
+      </div>
+
+      <div class="guide-card">
+        <h3>MechaPwn – Region Unlock for PS2 Slim</h3>
+        <p>Makes slim PS2 models (SCPH-500xx to 900xx) region-free for original discs.</p>
+        <ol>
+          <li>Requires FMCB or similar to launch homebrew.</li>
+          <li>Download MechaPwn ELF from the official GitHub.</li>
+          <li>Copy to USB and launch via uLaunchELF.</li>
+          <li>Backup your current MechaCon settings first!</li>
+          <li>Select the DEX option for full region-free (recommended for most users).</li>
+          <li>Power cycle and verify.</li>
+        </ol>
+        <div class="warning">Reversible but risky – follow instructions carefully. Not all models get full PS1 region-free.</div>
+        <a href="https://github.com/CTurt/MechaPwn/releases" target="_blank" class="download-btn">Download MechaPwn</a>
+      </div>
+    </div>
+
+    <div class="section">
+      <h2>PlayStation 1 Softmods</h2>
+      <p>Popular no-hardware-mod methods to play backups/imports on original PS1 hardware:</p>
+
+      <div class="guide-card">
+        <h3>Tonyhax International (Recommended)</h3>
+        <p>Best overall compatibility, including anti-piracy bypasses. Uses FreePSXBoot exploit.</p>
+        <ol>
+          <li>Download from official GitHub (alex-free/tonyhax-international).</li>
+          <li>Prepare a PS1 memory card (use a modded PS2 with FMCB or PC tool like MemcardRex).</li>
+          <li>Flash the Tonyhax loader via FreePSXBoot method.</li>
+          <li>Insert card, boot console (lid open if needed), access memory card manager to trigger.</li>
+          <li>Play burned discs or imports directly.</li>
+        </ol>
+        <p>Superior for games with LibCrypt/SecuROM protection.</p>
+        <a href="https://github.com/alex-free/tonyhax-international/releases" target="_blank" class="download-btn">Download Tonyhax</a>
+      </div>
+
+      <div class="guide-card">
+        <h3>FreePSXBoot + UniROM</h3>
+        <p>Simple exploit with built-in tools (e.g., format changer).</p>
+        <ol>
+          <li>Flash a memory card with FreePSXBoot (bundled with UniROM often).</li>
+          <li>Boot with lid open, go to memory card screen.</li>
+          <li>UniROM loads – insert disc to play backups.</li>
+        </ol>
+        <p>Good for basic use, but Tonyhax handles more protected games better.</p>
+        <a href="https://github.com/brad-lin/FreePSXBoot/releases" target="_blank" class="download-btn">Download FreePSXBoot</a>
+      </div>
+
+      <div class="warning">Always use legitimate backups. Compatibility varies by PS1 model – check lists on GitHub repos.</div>
+    </div>
+
+    <div class="section">
+      <h2>Hardware Mods and Modchips (PS1 & PS2)</h2>
+      <p>Hardware mods require soldering and technical skills. These can void warranties and risk damaging your console. Use for preservation purposes only.</p>
+
+      <div class="guide-card">
+        <h3>PS1 Modchips</h3>
+        <p>Classic chips to bypass protection for backups and imports. Installation involves soldering wires to the motherboard.</p>
+        <ul>
+          <li><strong>MM3 (MultiMode 3)</strong>: Supports backups and region unlock, works on all PS1 models (may have issues on early PU-7/PU-8). Requires 7-8 wires. <a href="https://quade.co/ps1-modchip-guide/" target="_blank" class="download-btn">Installation Guide</a></li>
+          <li><strong>Mayumi v4</strong>: Similar to MM3, reliable on most models except SCPH-100x. Internal clock for better timing.</li>
+          <li><strong>ONEchip</strong>: For PAL PSone (SCPH-102), supports BIOS patching.</li>
+          <li><strong>PsNee</strong>: Open-source (Atmel-based), stealth mode, works on early models like PU-7/8.</li>
+        </ul>
+        <div class="warning">Modchips may be illegal in some regions for circumvention. Check local laws.</div>
+      </div>
+
+      <div class="guide-card">
+        <h3>PS1 Raspberry Pi Pico Modchip</h3>
+        <p>A modern, cheap ($5) open-source modchip using Raspberry Pi Pico for backups on SCPH-100x models.</p>
+        <ol>
+          <li>Download firmware from community sources (e.g., GitHub repos for Pico mods).</li>
+          <li>Flash the Pico with the modchip code.</li>
+          <li>Solder wires to PS1 board (requires skills).</li>
+          <li>Test for compatibility.</li>
+        </ol>
+        <a href="https://github.com/search?q=ps1+pico+modchip" target="_blank" class="download-btn">Search GitHub for Firmware</a>
+        <div class="warning">Requires soldering; not for beginners.</div>
+      </div>
+
+      <div class="guide-card">
+        <h3>PS1 xStation (ODE)</h3>
+        <p>Optical Drive Emulator replaces the CD drive for loading games from SD card. No disc needed.</p>
+        <ol>
+          <li>Purchase xStation kit from reputable sellers.</li>
+          <li>Install by removing old drive and soldering the board.</li>
+          <li>Format SD card with games in BIN/CUE format.</li>
+        </ol>
+        <a href="https://github.com/x-station/xStation" target="_blank" class="download-btn">xStation GitHub</a>
+      </div>
+
+      <div class="guide-card">
+        <h3>PS2 Modchips</h3>
+        <p>Hardware chips for direct boot of backups without softmods.</p>
+        <ul>
+          <li><strong>ModBo</strong>: Open-source, supports all revisions. Discussion on PSX-Place for DIY.</li>
+          <li><strong>Matrix Infinity</strong>: Classic chip, region unlock, macro support. Hard to find new.</li>
+          <li><strong>Open-Source Modchip Projects</strong>: Community efforts for new chips supporting all motherboards.</li>
+        </ul>
+        <a href="https://www.psx-place.com/threads/ps2-open-source-modchip-discussion.43705/" target="_blank" class="download-btn">PSX-Place Discussion</a>
+      </div>
+
+      <div class="guide-card">
+        <h3>PS2 SATA Mod</h3>
+        <p>Upgrade fat PS2 network adapter to SATA for faster HDD loading.</p>
+        <ol>
+          <li>Purchase SATA adapter board.</li>
+          <li>Replace IDE connector in network adapter.</li>
+          <li>Install SATA HDD and use OPL/FHDB.</li>
+        </ol>
+        <div class="warning">Soldering required; compatible with fat models only.</div>
+      </div>
+
+      <div class="guide-card">
+        <h3>PS2 HDMI Mods</h3>
+        <p>Solder HDMI output for modern TVs (e.g., PS2Digital or similar kits).</p>
+        <ol>
+          <li>Buy HDMI mod kit.</li>
+          <li>Solder to video chip.</li>
+          <li>Test output.</li>
+        </ol>
+        <a href="https://consolemods.org/wiki/PS2:PS2_Mods_Wiki" target="_blank" class="download-btn">PS2 Mods Wiki</a>
+      </div>
+
+      <div class="guide-card">
+        <h3>MemCard PRO2 (PS1/PS2)</h3>
+        <p>Hardware memory card with infinite virtual saves via SD card.</p>
+        <ol>
+          <li>Purchase from 8BitMods or similar.</li>
+          <li>Insert SD card with saves.</li>
+          <li>Use in console slot.</li>
+        </ol>
+        <a href="https://8bitmods.com/memcard-pro2-for-ps2-and-ps1-smoke-black/" target="_blank" class="download-btn">Buy MemCard PRO2</a>
+      </div>
+    </div>
+  </div>
+
+  <footer>
+    © 2026 PSX Hub – Built for the community. Join us on Discord: <a href="https://discord.gg/XRKWhHZRAk" style="color:#00ffff;">discord.gg/XRKWhHZRAk</a>
+  </footer>
+</body>
+</html>
